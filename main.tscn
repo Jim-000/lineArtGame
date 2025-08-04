@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://brvnw05dj553k"]
+
+[ext_resource type="Texture2D" uid="uid://coifrpexymwih" path="res://assets/practiceBackground.png" id="1_ig7tw"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ig7tw"]
+light_mode = 2
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0xm2m"]
+polygon = PackedVector2Array(2, 644, 35, 640, 59, 642, 74, 642, 77, 632, 95, 629, 113, 625, 123, 624, 134, 625, 136, 608, 165, 608, 200, 611, 210, 606, 207, 592, 213, 593, 222, 592, 226, 590, 230, 589, 259.258, 590.045, 286, 591, 284, 576, 283, 571, 300, 569, 313, 570, 359, 570, 361, 553, 365, 552, 377, 553, 386, 552, 390, 551, 395, 552, 398, 553, 439, 554, 439, 531, 468, 534, 482, 531, 490, 529, 519, 528, 521, 504, 538, 507, 558, 505, 577, 504, 583, 503, 586, 505, 596, 503, 609, 506, 609, 484, 656, 488, 682, 483, 685, 467, 763, 465, 765, 449, 804, 450, 821, 442, 835, 443, 846, 439, 849, 437, 851, 425, 919, 427, 920, 404, 995, 403, 1001, 378, 1032, 377, 1080, 380, 1080, 348, 1096, 348, 1107, 346, 1121, 348, 1155, 348, 1162, 348, 1163, 327, 1190, 325, 1233, 324, 1240, 321, 1239, 295, 1308, 299, 1309, 628, -2, 667)
+
+[node name="main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.147673, 0.147671, 0.147672, 1)
+material = SubResource("CanvasItemMaterial_ig7tw")
+position = Vector2(1083, -129)
+texture = ExtResource("1_ig7tw")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D"]
+position = Vector2(-1072, 103)
+occluder = SubResource("OccluderPolygon2D_0xm2m")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(1313, 220)
+rotation = -5.18886
+energy = 3.3
+shadow_enabled = true
+shadow_color = Color(1, 0, 0, 0)
+shadow_filter = 1
